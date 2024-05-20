@@ -8,6 +8,10 @@
 	#include <stdio.h>
 #endif
 
+//UartHandler
+extern void UART2_Configuration(void);
+
+
 void erase_flash_sector(uint32_t sector_addr)
 {
 	uint16_t erase_id = 0;

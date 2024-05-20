@@ -125,6 +125,13 @@ uint8_t g_recv_buf[DATA_BUF_SIZE];
 
 extern uint8_t gSEGCPREQ[CONFIG_BUF_SIZE];
 extern uint8_t gSEGCPREP[CONFIG_BUF_SIZE];
+
+//HTTPServer
+extern void httpServer_init(uint8_t * tx_buf, uint8_t * rx_buf, uint8_t cnt, uint8_t * socklist);
+extern void reg_httpServer_cbfunc(void(*mcu_reset)(void), void(*wdt_reset)(void));
+extern void reg_httpServer_webContent(uint8_t * content_name, uint8_t * content);
+extern void httpServer_run(uint8_t seqnum);
+
 /**
   * @brief  Main program
   * @param  None

@@ -3,6 +3,10 @@
 
 
 #include "W7500x_it.h"
+extern __attribute__((weak)) void PORT3_Handler(void);
+extern __attribute__((weak)) void RTC_Handler(void);
+
+
 
 void Remap_NMI_Handler(void)            __attribute__((section (".ARM.__at_0x00007D00")));		//__attribute__((section (".ARM.__at_0x0001FD00")));
 void Remap_HardFault_Handler(void)   	__attribute__((section (".ARM.__at_0x00007D08")));		//__attribute__((section (".ARM.__at_0x0001FD08)")));

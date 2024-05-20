@@ -81,6 +81,10 @@ void default_wdt_reset(void) {;}
 void (*HTTPServer_ReStart)(void) = default_mcu_reset;
 void (*HTTPServer_WDT_Reset)(void) = default_wdt_reset;
 
+	//Extern functions
+extern	void delay(__IO uint32_t milliseconds); //Notice: used ioLibray
+
+
 void httpServer_Sockinit(uint8_t cnt, uint8_t * socklist)
 {
 	uint8_t i;

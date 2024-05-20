@@ -54,6 +54,11 @@ uint8_t flag_send_configtool_keepalive = SEGCP_DISABLE;
 
 extern uint8_t tmp_timeflag_for_debug;
 
+
+extern void flash_update_start(void);
+extern void flash_update_end(void);
+
+
 void do_segcp(void)
 {
     DevConfig *dev_config = get_DevConfig_pointer();

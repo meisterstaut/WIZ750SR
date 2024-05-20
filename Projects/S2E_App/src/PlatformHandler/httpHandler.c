@@ -12,6 +12,11 @@
 #include "httpHandler.h"
 #include "httpParser.h"
 
+
+extern void flash_update_start(void);
+extern void flash_update_end(void);
+
+
 void make_json_devinfo(uint8_t * buf, uint16_t * len)
 {
   DevConfig *dev_config = get_DevConfig_pointer();

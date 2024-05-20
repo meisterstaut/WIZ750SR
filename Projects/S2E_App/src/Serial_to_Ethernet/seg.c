@@ -111,7 +111,8 @@ uint16_t debugSerial_dataTransfer(uint8_t * buf, uint16_t size, teDEBUGTYPE type
 #endif
 
 /* Public & Private functions ------------------------------------------------*/
-
+extern _ARMABI void srand(unsigned int /*seed*/);
+extern _ARMABI int rand(void);
 void do_seg(uint8_t sock)
 {
 	//DevConfig *s2e = get_DevConfig_pointer();

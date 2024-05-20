@@ -39,15 +39,17 @@
 
 
 
-#if defined ( __CC_ARM   )
+#if defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
 /******************************************************************************/
 /* Retarget functions for ARM DS-5 Professional / Keil MDK                    */
 /******************************************************************************/
 #include <time.h>
 #include <rt_misc.h>
-#pragma import(__use_no_semihosting_swi)
 
-struct __FILE { int handle; /* Add whatever you need here */ };
+//#pragma import(__use_no_semihosting_swi)
+__asm(".global __use_no_semihosting\n\t");
+
+//struct __FILE { int handle; /* Add whatever you need here */ };
 FILE __stdout;
 FILE __stdin;
 
